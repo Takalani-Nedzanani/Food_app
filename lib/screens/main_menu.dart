@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+//import 'package:food_app/widgets/bottomNav.dart';
 
 class MainMenuScreen extends StatelessWidget {
   const MainMenuScreen({super.key});
@@ -9,8 +10,19 @@ class MainMenuScreen extends StatelessWidget {
       length: 3,
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('Our Menu'),
+          backgroundColor: const Color.fromARGB(255, 244, 238, 238),
+          title: const Text(
+            'Our Menu',
+            style: TextStyle(
+              fontSize: 30,
+              color: Color.fromARGB(255, 11, 11, 11),
+              fontWeight: FontWeight.bold,
+            ),
+          ),
           bottom: const TabBar(
+            labelColor: Color.fromARGB(255, 255, 179, 0),
+            dividerColor: Color.fromARGB(255, 255, 179, 0),
+            indicatorColor: Color.fromARGB(255, 255, 179, 0),
             tabs: [
               Tab(text: 'Meals'),
               Tab(text: 'Sides'),
@@ -39,45 +51,45 @@ class MainMenuScreen extends StatelessWidget {
       children: [
         _buildCard(
           context,
-          title: 'Beef Burger',
+          title: 'Combo',
           subtitle: 'Juicy beef patty with cheese',
-          price: 'R50',
-          imagePath: 'assets/images/burger.jpg',
+          price: 'R150',
+          imagePath: 'assets/images/combo1.jpeg',
         ),
         _buildCard(
           context,
-          title: 'Grilled Chicken',
+          title: 'Taco de carnitas',
           subtitle: 'Served with veggies',
           price: 'R75',
-          imagePath: 'assets/images/burger.jpg',
+          imagePath: 'assets/images/taco1.jpg',
         ),
         _buildCard(
           context,
-          title: 'Spring Rolls',
+          title: 'Taco de pollo',
           subtitle: 'Vegetable stuffed rolls',
-          price: 'R25',
-          imagePath: 'assets/images/burger.jpg',
+          price: 'R35',
+          imagePath: 'assets/images/taco2.jpeg',
         ),
         _buildCard(
           context,
-          title: 'Spring Rolls',
+          title: ' Taco de barbacoa',
           subtitle: 'Vegetable stuffed rolls',
-          price: 'R25',
-          imagePath: 'assets/images/burger.jpg',
+          price: 'R45',
+          imagePath: 'assets/images/taco4.png',
         ),
         _buildCard(
           context,
-          title: 'Spring Rolls',
+          title: 'Taco de birria',
           subtitle: 'Vegetable stuffed rolls',
-          price: 'R25',
-          imagePath: 'assets/images/burger.jpg',
+          price: 'R55',
+          imagePath: 'assets/images/taco3.jpg',
         ),
         _buildCard(
           context,
-          title: 'Spring Rolls',
+          title: 'Taco de asada',
           subtitle: 'Vegetable stuffed rolls',
-          price: 'R25',
-          imagePath: 'assets/images/burger.jpg',
+          price: 'R65',
+          imagePath: 'assets/images/taco5.jpeg',
         ),
       ],
     );
@@ -93,45 +105,45 @@ class MainMenuScreen extends StatelessWidget {
       children: [
         _buildCard(
           context,
-          title: 'French Fries',
+          title: 'Beef Burger',
           subtitle: 'Crispy and golden fries',
-          price: 'R25',
+          price: 'R30',
           imagePath: 'assets/images/burger.jpg',
         ),
         _buildCard(
           context,
           title: 'Onion Rings',
           subtitle: 'Fried to perfection',
+          price: 'R15',
+          imagePath: 'assets/images/side1.jpg',
+        ),
+        _buildCard(
+          context,
+          title: 'Spring Rolls',
+          subtitle: 'Vegetable stuffed rolls',
+          price: 'R25',
+          imagePath: 'assets/images/side2.jpeg',
+        ),
+        _buildCard(
+          context,
+          title: 'Fried Wings',
+          subtitle: 'Vegetable stuffed rolls',
+          price: 'R45',
+          imagePath: 'assets/images/side3.jpeg',
+        ),
+        _buildCard(
+          context,
+          title: 'Salad',
+          subtitle: 'Vegetable stuffed rolls',
           price: 'R20',
-          imagePath: 'assets/images/burger.jpg',
+          imagePath: 'assets/images/side4.jpg',
         ),
         _buildCard(
           context,
-          title: 'Spring Rolls',
+          title: 'Mashed Potato',
           subtitle: 'Vegetable stuffed rolls',
-          price: 'R25',
-          imagePath: 'assets/images/burger.jpg',
-        ),
-        _buildCard(
-          context,
-          title: 'Spring Rolls',
-          subtitle: 'Vegetable stuffed rolls',
-          price: 'R25',
-          imagePath: 'assets/images/burger.jpg',
-        ),
-        _buildCard(
-          context,
-          title: 'Spring Rolls',
-          subtitle: 'Vegetable stuffed rolls',
-          price: 'R25',
-          imagePath: 'assets/images/burger.jpg',
-        ),
-        _buildCard(
-          context,
-          title: 'Spring Rolls',
-          subtitle: 'Vegetable stuffed rolls',
-          price: 'R25',
-          imagePath: 'assets/images/burger.jpg',
+          price: 'R18',
+          imagePath: 'assets/images/side5.jpeg',
         ),
       ],
     );
@@ -150,42 +162,42 @@ class MainMenuScreen extends StatelessWidget {
           title: 'Chicken Nuggets',
           subtitle: 'Crispy chicken bites',
           price: 'R30',
-          imagePath: 'assets/images/burger.jpg',
+          imagePath: 'assets/images/snack1.jpeg',
         ),
         _buildCard(
           context,
-          title: 'Spring Rolls',
+          title: 'Waffles',
           subtitle: 'Vegetable stuffed rolls',
           price: 'R25',
-          imagePath: 'assets/images/burger.jpg',
+          imagePath: 'assets/images/snack2.jpg',
         ),
         _buildCard(
           context,
-          title: 'Spring Rolls',
+          title: 'Banana Desert',
           subtitle: 'Vegetable stuffed rolls',
-          price: 'R25',
-          imagePath: 'assets/images/burger.jpg',
+          price: 'R15',
+          imagePath: 'assets/images/snack3.jpeg',
         ),
         _buildCard(
           context,
-          title: 'Spring Rolls',
+          title: 'Chips',
           subtitle: 'Vegetable stuffed rolls',
-          price: 'R25',
-          imagePath: 'assets/images/burger.jpg',
+          price: 'R10',
+          imagePath: 'assets/images/snack4.jpg',
         ),
         _buildCard(
           context,
-          title: 'Spring Rolls',
+          title: 'Cake',
           subtitle: 'Vegetable stuffed rolls',
-          price: 'R25',
-          imagePath: 'assets/images/burger.jpg',
+          price: 'R29',
+          imagePath: 'assets/images/snack5.jpeg',
         ),
         _buildCard(
           context,
-          title: 'Spring Rolls',
+          title: 'Pudding',
           subtitle: 'Vegetable stuffed rolls',
-          price: 'R25',
-          imagePath: 'assets/images/burger.jpg',
+          price: 'R60',
+          imagePath: 'assets/images/snack6.jpeg',
         ),
       ],
     );
@@ -248,10 +260,20 @@ class MainMenuScreen extends StatelessWidget {
                   ),
                 ),
                 IconButton(
-                  icon: const Icon(Icons.favorite_border, color: Colors.red),
+                  icon: const Icon(Icons.favorite_border,
+                      color: Color.fromARGB(255, 244, 190, 54)),
                   onPressed: () {
                     ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(content: Text('Liked $title!')),
+                      SnackBar(
+                        content: Text(
+                          'Liked $title!',
+                          style: const TextStyle(
+                            color: Color.fromARGB(255, 255, 255, 255),
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        backgroundColor: const Color.fromARGB(255, 207, 170, 3),
+                      ),
                     );
                   },
                 ),

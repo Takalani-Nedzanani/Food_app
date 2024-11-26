@@ -3,24 +3,6 @@ import 'package:food_app/screens/livechat.dart';
 import 'package:food_app/screens/main_menu.dart';
 import 'package:food_app/screens/profile.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Menu App',
-      theme: ThemeData(primarySwatch: Colors.blue),
-      home: const NavigationPage(), // Main page with bottom navigation
-    );
-  }
-}
-
 class NavigationPage extends StatefulWidget {
   const NavigationPage({super.key});
 
@@ -31,7 +13,7 @@ class NavigationPage extends StatefulWidget {
 class _NavigationPageState extends State<NavigationPage> {
   int _selectedIndex = 0;
 
-  // List of pages for navigation
+  // List of pages for each tab
   static const List<Widget> _pages = [
     MainMenuScreen(),
     LiveChatScreen(),
@@ -40,20 +22,19 @@ class _NavigationPageState extends State<NavigationPage> {
 
   void _onItemTapped(int index) {
     setState(() {
-      _selectedIndex = index; // Update selected index
+      _selectedIndex = index;
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _pages[_selectedIndex], // Display the current page
+      body: _pages[_selectedIndex], // Display the selected page
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: const Color.fromARGB(255, 198, 195, 195),
-        selectedItemColor: const Color.fromARGB(255, 255, 179, 0),
-        unselectedItemColor: const Color.fromARGB(255, 0, 0, 0),
-        currentIndex: _selectedIndex, // Highlight the selected item
-        onTap: _onItemTapped, // Handle navigation taps
+        currentIndex: _selectedIndex,
+        onTap: _onItemTapped,
+        selectedItemColor: Colors.amber, // Selected icon color
+        unselectedItemColor: Colors.grey, // Unselected icon color
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.restaurant_menu),
