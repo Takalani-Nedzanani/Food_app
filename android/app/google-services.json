@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "160219949947",
+    "firebase_url": "https://chatting-aaplicating-default-rtdb.firebaseio.com",
+    "project_id": "chatting-aaplicating",
+    "storage_bucket": "chatting-aaplicating.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:160219949947:android:931d964bee9b08b27debde",
+        "android_client_info": {
+          "package_name": "com.example.chating_application_2024"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAYV2MXT0IB-54MJ0f9hL9ywJ_zjojELo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:160219949947:android:c362f3ec5d8c1a577debde",
+        "android_client_info": {
+          "package_name": "com.example.food_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAYV2MXT0IB-54MJ0f9hL9ywJ_zjojELo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

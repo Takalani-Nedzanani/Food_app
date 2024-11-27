@@ -1,10 +1,20 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:food_app/screens/livechat.dart';
 import 'package:food_app/screens/main_menu.dart';
 import 'package:food_app/screens/profile.dart';
+import 'package:food_app/widgets/themeManager.dart';
+import 'package:provider/provider.dart';
 
-void main() {
-  runApp(const MyApp());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(
+    ChangeNotifierProvider(
+      create: (_) => ThemeManager(ThemeData.light()), // Default theme
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -12,10 +22,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final themeManager = Provider.of<ThemeManager>(context);
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Menu App',
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme: themeManager.themeData,
       home: const NavigationPage(), // Main page with bottom navigation
     );
   }
