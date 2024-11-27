@@ -49,9 +49,15 @@ class _NavigationPageState extends State<NavigationPage> {
     return Scaffold(
       body: _pages[_selectedIndex], // Display the current page
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: const Color.fromARGB(255, 198, 195, 195),
-        selectedItemColor: const Color.fromARGB(255, 255, 179, 0),
+        backgroundColor: const Color.fromARGB(255, 239, 148, 11),
+        selectedItemColor: const Color.fromARGB(255, 255, 255, 255),
         unselectedItemColor: const Color.fromARGB(255, 0, 0, 0),
+        selectedLabelStyle: const TextStyle(
+          fontWeight: FontWeight.bold,
+        ),
+        unselectedLabelStyle: const TextStyle(
+          fontWeight: FontWeight.bold,
+        ),
         currentIndex: _selectedIndex, // Highlight the selected item
         onTap: _onItemTapped, // Handle navigation taps
         items: const [
